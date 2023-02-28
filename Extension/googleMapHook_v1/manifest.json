@@ -1,0 +1,38 @@
+{
+    "name": "googleMap_hook",
+    "version": "1.0.1",
+    "minimum_chrome_version": "10.0",
+    "description": "googleMap_hook",
+    "devtools_page": "devtools/devtools.html",
+    "manifest_version": 3,
+    "permissions":[          
+        "activeTab",
+        "tabs",
+        "scripting",
+        "webRequest"
+    ],
+    "icons":
+      {
+        "48": "icons/icon.png"
+      },
+    "action":{
+      "default_popup":"popup/popup.html"
+    },
+    "background":{
+      "service_worker": "js/background.js"
+   },
+    "content_scripts":[{
+      "matches":["https://www.google.com/maps/*"], 
+      "js"  : ["content_script/contentScript.js"],  
+      "run_at": "document_end" 
+    }],
+    "web_accessible_resources": [
+      {
+        "resources": ["js/*.js"],
+        "matches":["<all_urls>"]
+      }
+    ],
+    "externally_connectable": {
+      "matches": ["https://www.google.com/maps/*","http://localhost:8080/"]
+     }
+  }

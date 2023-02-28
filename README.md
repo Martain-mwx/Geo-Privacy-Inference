@@ -1,13 +1,16 @@
 # Geo-Privacy-Inference
 
-# Inrroduction
+# Introduction
 
-This code repository stores program implementation for paper submission *Geo-Privacy Inference: A Novel GPU Side-Channel Attacks against WebGL* 
+This code repository stores program implementation for paper submission *Geo-Privacy Inference: A Novel GPU Side-Channel Attacks against WebGL*.
 
  # Directory structure
 
-- OfflinePhase: 
-- OnlinePhase:
+Extension: provide source code for the attack extension.
 
-For more description on each part, please refer to the paper and README files in each directory.
+Selemium: provides scripts that automatically collect WebGL-rendered data.
+
+Server: the background implemented by Java is used for preliminary time series segmentation and the background of the Python implementation is used for classification.
+
+Model:  
 

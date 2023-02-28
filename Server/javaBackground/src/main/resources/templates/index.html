@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="/webjars/jquery/3.6.0/jquery.js"></script>
+    <script src="/js/vue.js"></script>
+    <title>首页</title>
+</head>
+<body>
+    <canvas id="webglCanvas" height="640" width="480" style="border: 1px solid red;"></canvas>
+    <br>
+<div id="canvasContainer">
+    请输入：<input type="text" @keyup="show"><br>
+    <span> {{list}}</span>
+</div>
+<div>
+    <input type="button" id="worker_btn" @click="show" value="offScreenCanvas 启动"></input>
+</div>
+
+
+<div id="div_public_ip"></div>
+<div id="div_public_addr"></div>
+
+</body>
+
+<!--<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>-->
+<!--document.write(returnCitySN["cip"]+','+returnCitySN["cname"])-->
+
+<script type="text/javascript">
+
+
+
+
+    // var url  = "http://whois.pconline.com.cn/ip.js"
+    //
+    // function httpRequest(call,method,url) {
+    //     var httpRequest = new XMLHttpRequest()
+    //     httpRequest.open(method,url,true)
+    //     httpRequest.send()
+    //     httpRequest.onreadystatechange = function () {
+    //         if (httpRequest.readyState == 4 && httpRequest.status == 200){
+    //             call(httpRequest.responseText)
+    //         }
+    //     }
+    // }
+    // function getIPAddr(addr){
+    //     console.log(addr)
+    //     document.getElementById('div_public_addr').innerHTML = addr;
+    // };
+    // httpRequest(getIPAddr,"get",url)
+
+    // /********************************************************
+    //  ************************ 获取本机IP ********************
+    //  ********************************************************/
+
+    //
+    //
+    // function getIPAddr(callback) {
+    //
+    //     httpRequest(function(status, respText) {
+    //         if(status == 200) {
+    //             _respText = respText.replace('var returnCitySN = ', '');
+    //             _respText = _respText.substring(0, _respText.length - 1);
+    //             _returnCitySN = JSON.parse(_respText);
+    //             _ip = _returnCitySN.cip;
+    //             _addr = _returnCitySN.cname;
+    //             callback(_ip, _addr);
+    //         }
+    //     }, 'GET', 'http://pv.sohu.com/cityjson?ie=utf-8');
+    // }
+
+
+
+</script>
+</html>
